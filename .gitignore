@@ -1,0 +1,19 @@
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+# production
+/build
+
+# vscode
+.vscode/*
+!.vscode/launch.json
+!.vscode/settings.json
+
+# misc
+.DS_Store
+.env
+npm-debug.log
+*.log
