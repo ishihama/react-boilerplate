@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import Counter from './components/Counter';
+import Counter from './components/molecules/Counter';
 
 const App: React.FC = () => {
   return (
