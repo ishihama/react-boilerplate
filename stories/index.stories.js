@@ -36,7 +36,7 @@ storiesOf('Counter', module)
   .addDecorator(story => <Provider store={store}>{story()}</Provider>)
   .add('Counter', () => <Counter />);
 
-storiesOf('Default', module)
+storiesOf('Layout', module)
   .addDecorator(withKnobs)
   .addDecorator(withInfo({ inline: true }))
   .addDecorator(story => <Provider store={store}>{story()}</Provider>)
