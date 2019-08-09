@@ -9,7 +9,7 @@ import { linkTo } from '@storybook/addon-links';
 
 // import { Button, Welcome } from '@storybook/react/demo';
 import store from '../src/store';
-import Button from '../src/components/atoms/Button';
+import { BaseButton, TomatoButton } from '../src/components/atoms/Button';
 import Counter from '../src/components/molecules/Counter';
 import Default from '../src/components/templates/Default';
 
@@ -21,13 +21,16 @@ import Default from '../src/components/templates/Default';
 storiesOf('Button', module)
   .addDecorator(withKnobs)
   .addDecorator(withInfo({ inline: true }))
-  .add('with text', () => <Button onClick={action('clicked')}>{text('Label', 'Hello Button')}</Button>)
+  .add('with text', () => <BaseButton onClick={action('clicked')}>{text('Label', 'Hello Button')}</BaseButton>)
+  .add('with Tomato Style', () => (
+    <TomatoButton onClick={action('clicked')}>{text('Label', 'Tomato Button')}</TomatoButton>
+  ))
   .add('with some emoji', () => (
-    <Button onClick={action('clicked')}>
+    <BaseButton onClick={action('clicked')}>
       <span role="img" aria-label="so cool">
         😀 😎 👍 💯
       </span>
-    </Button>
+    </BaseButton>
   ));
 
 storiesOf('Counter', module)

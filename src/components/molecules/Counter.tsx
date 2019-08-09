@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Button from '../atoms/Button';
+import { BaseButton } from '../atoms/Button';
 
 import { counterSelector } from '../../store';
 import { increment, decrement } from '../../store/modules/Counter';
@@ -16,12 +16,12 @@ const Counter: React.FC = () => {
       {count}
       count
       <div className="ui two buttons">
-        <Button color="red" onClick={handleDecrement}>
+        <BaseButton color="red" onClick={handleDecrement}>
           -1
-        </Button>
-        <Button color="green" onClick={handleIncrement}>
+        </BaseButton>
+        <BaseButton color="green" onClick={handleIncrement}>
           +1
-        </Button>
+        </BaseButton>
       </div>
     </div>
   );
