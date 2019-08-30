@@ -1,4 +1,5 @@
 {
+    "editor.formatOnSave": true,
     "files.autoSave": "off",
     "eslint.enable": true,
     "eslint.autoFixOnSave": true,
